@@ -1,0 +1,192 @@
+{
+  // Rust Configuration
+  "rust-analyzer.check.command": "clippy",
+  "rust-analyzer.cargo.features": "all",
+  "rust-analyzer.procMacro.enable": true,
+  "rust-analyzer.imports.granularity.group": "module",
+  "rust-analyzer.completion.addCallArgumentSnippets": true,
+  "rust-analyzer.completion.addCallParenthesis": true,
+  "rust-analyzer.lens.enable": true,
+  "rust-analyzer.lens.implementations.enable": true,
+  "rust-analyzer.lens.references.enable": true,
+  "rust-analyzer.lens.methodReferences.enable": true,
+  "rust-analyzer.hover.actions.enable": true,
+  "rust-analyzer.hover.actions.implementations.enable": true,
+  "rust-analyzer.hover.actions.references.enable": true,
+  "rust-analyzer.inlayHints.enable": true,
+  "rust-analyzer.inlayHints.chainingHints.enable": true,
+  "rust-analyzer.inlayHints.parameterHints.enable": true,
+  "rust-analyzer.inlayHints.typeHints.enable": true,
+  
+  // Go Configuration
+  "go.useLanguageServer": true,
+  "go.languageServerExperimentalFeatures": {
+    "diagnostics": true,
+    "documentLink": true
+  },
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": ["--fast"],
+  "go.formatTool": "goimports",
+  "go.generateTestsFlags": ["-exported"],
+  "go.testFlags": ["-v", "-race"],
+  "go.buildFlags": ["-v"],
+  "go.vetFlags": ["-all"],
+  "go.coverOnSave": false,
+  "go.coverOnSingleTest": true,
+  "go.coverageDecorator": {
+    "type": "gutter",
+    "coveredHighlightColor": "rgba(64,128,128,0.5)",
+    "uncoveredHighlightColor": "rgba(128,64,64,0.25)",
+    "coveredGutterStyle": "blockblue",
+    "uncoveredGutterStyle": "blockred"
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "gopls": {
+    "ui.completion.usePlaceholders": true,
+    "ui.diagnostic.staticcheck": true,
+    "ui.codelenses": {
+      "gc_details": false,
+      "generate": true,
+      "regenerate_cgo": true,
+      "test": true,
+      "tidy": true,
+      "upgrade_dependency": true,
+      "vendor": true
+    }
+  },
+  
+  // Elixir Configuration
+  "elixirLS.dialyzerEnabled": true,
+  "elixirLS.fetchDeps": true,
+  "elixirLS.suggestSpecs": true,
+  "elixirLS.signatureAfterComplete": true,
+  "elixirLS.enableTestLenses": true,
+  "elixirLS.mixEnv": "dev",
+  "elixirLS.projectDir": "",
+  
+  // File Associations
+  "files.associations": {
+    "*.rs": "rust",
+    "*.go": "go",
+    "*.ex": "elixir",
+    "*.exs": "elixir",
+    "*.eex": "phoenix-heex",
+    "*.heex": "phoenix-heex",
+    "*.leex": "phoenix-heex",
+    "Dockerfile*": "dockerfile",
+    "docker-compose*.yml": "dockercompose",
+    "*.toml": "toml",
+    "Cargo.lock": "toml"
+  },
+  
+  // Editor Configuration
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.organizeImports": true
+  },
+  "editor.rulers": [80, 100, 120],
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 100,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.trimAutoWhitespace": true,
+  "editor.minimap.enabled": true,
+  "editor.minimap.maxColumn": 120,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.inlineSuggest.enabled": true,
+  
+  // Language-specific formatting
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true
+  },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "editor.tabSize": 4,
+    "editor.insertSpaces": false
+  },
+  "[elixir]": {
+    "editor.defaultFormatter": "JakeBecker.elixir-ls",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml",
+    "editor.tabSize": 2
+  },
+  
+  // Terminal Configuration
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "JetBrains Mono, Fira Code, monospace",
+  
+  // Git Configuration
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.showPushSuccessNotification": true,
+  
+  // Search Configuration
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/target": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/.git": true,
+    "**/vendor": true,
+    "**/deps": true,
+    "**/_build": true
+  },
+  
+  // Files Configuration
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/target": true,
+    "**/_build": true,
+    "**/deps": true
+  },
+  
+  // Debugging Configuration
+  "debug.allowBreakpointsEverywhere": true,
+  "debug.inlineValues": true,
+  "debug.showBreakpointsInOverviewRuler": true,
+  
+  // Testing Configuration
+  "testing.automaticallyOpenPeekView": "never",
+  "testing.followRunningTest": true,
+  
+  // Docker Configuration
+  "docker.showStartPage": false,
+  
+  // Kubernetes Configuration
+  "vs-kubernetes": {
+    "vs-kubernetes.crd-code-completion": "enabled"
+  },
+  
+  // Performance Configuration
+  "extensions.autoUpdate": false,
+  "telemetry.telemetryLevel": "off",
+  "workbench.enableExperiments": false,
+  "workbench.settings.enableNaturalLanguageSearch": false
+}

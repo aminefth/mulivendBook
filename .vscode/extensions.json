@@ -1,0 +1,49 @@
+{
+  "recommendations": [
+    // Rust Extensions
+    "rust-lang.rust-analyzer",
+    "vadimcn.vscode-lldb",
+    "serayuzgur.crates",
+    "tamasfe.even-better-toml",
+    
+    // Go Extensions
+    "golang.go",
+    "ms-vscode.vscode-json",
+    
+    // Elixir Extensions
+    "jakebecker.elixir-ls",
+    "phoenixframework.phoenix",
+    
+    // Database Extensions
+    "ms-mssql.mssql",
+    "ckolkman.vscode-postgres",
+    
+    // Docker & Kubernetes
+    "ms-azuretools.vscode-docker",
+    "ms-kubernetes-tools.vscode-kubernetes-tools",
+    
+    // General Development
+    "ms-vscode.vscode-typescript-next",
+    "bradlc.vscode-tailwindcss",
+    "esbenp.prettier-vscode",
+    "ms-vscode.vscode-eslint",
+    
+    // Git & Version Control
+    "eamodio.gitlens",
+    "github.vscode-pull-request-github",
+    
+    // Testing & Debugging
+    "ms-vscode.test-adapter-converter",
+    "hbenl.vscode-test-explorer",
+    
+    // API Development
+    "humao.rest-client",
+    "42crunch.vscode-openapi",
+    
+    // Productivity
+    "ms-vscode.vscode-json",
+    "redhat.vscode-yaml",
+    "ms-vscode.hexeditor",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}

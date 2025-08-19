@@ -1,0 +1,226 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "cargo build auth-service",
+      "type": "cargo",
+      "command": "build",
+      "args": ["--manifest-path", "services/auth-service/Cargo.toml"],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": ["$rustc"]
+    },
+    {
+      "label": "cargo test auth-service",
+      "type": "cargo",
+      "command": "test",
+      "args": ["--manifest-path", "services/auth-service/Cargo.toml"],
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": ["$rustc"]
+    },
+    {
+      "label": "cargo run auth-service",
+      "type": "cargo",
+      "command": "run",
+      "args": ["--manifest-path", "services/auth-service/Cargo.toml"],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": ["$rustc"]
+    },
+    {
+      "label": "go build vendor-service",
+      "type": "shell",
+      "command": "go",
+      "args": ["build", "-v", "./..."],
+      "options": {
+        "cwd": "${workspaceFolder}/services/vendor-service"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": ["$go"]
+    },
+    {
+      "label": "go test vendor-service",
+      "type": "shell",
+      "command": "go",
+      "args": ["test", "-v", "-race", "./..."],
+      "options": {
+        "cwd": "${workspaceFolder}/services/vendor-service"
+      },
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": ["$go"]
+    },
+    {
+      "label": "go run vendor-service",
+      "type": "shell",
+      "command": "go",
+      "args": ["run", "main.go"],
+      "options": {
+        "cwd": "${workspaceFolder}/services/vendor-service"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": ["$go"]
+    },
+    {
+      "label": "mix deps.get",
+      "type": "shell",
+      "command": "mix",
+      "args": ["deps.get"],
+      "options": {
+        "cwd": "${workspaceFolder}/services/order-service"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "mix test",
+      "type": "shell",
+      "command": "mix",
+      "args": ["test"],
+      "options": {
+        "cwd": "${workspaceFolder}/services/order-service"
+      },
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "mix phx.server",
+      "type": "shell",
+      "command": "mix",
+      "args": ["phx.server"],
+      "options": {
+        "cwd": "${workspaceFolder}/services/order-service"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "isBackground": true
+    },
+    {
+      "label": "Start Infrastructure",
+      "type": "shell",
+      "command": "make",
+      "args": ["infra-up"],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "isBackground": true
+    },
+    {
+      "label": "Stop Infrastructure",
+      "type": "shell",
+      "command": "make",
+      "args": ["infra-down"],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Build All Services",
+      "type": "shell",
+      "command": "make",
+      "args": ["build"],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Test All Services",
+      "type": "shell",
+      "command": "make",
+      "args": ["test"],
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Database Migration",
+      "type": "shell",
+      "command": "make",
+      "args": ["migrate"],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Seed Database",
+      "type": "shell",
+      "command": "make",
+      "args": ["seed"],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      }
+    }
+  ]
+}
