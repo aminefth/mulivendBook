@@ -1,0 +1,126 @@
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: bookmarket-gateway
+  namespace: bookmarket
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - "*"
+  - port:
+      number: 443
+      name: https
+      protocol: HTTPS
+    tls:
+      mode: SIMPLE
+      credentialName: bookmarket-tls
+    hosts:
+    - "api.bookmarket.com"
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: bookmarket-routes
+  namespace: bookmarket
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - bookmarket-gateway
+  http:
+  - match:
+    - uri:
+        prefix: /api/auth
+    route:
+    - destination:
+        host: auth-service
+        port:
+          number: 80
+    timeout: 30s
+    retries:
+      attempts: 3
+      perTryTimeout: 10s
+  - match:
+    - uri:
+        prefix: /api/vendors
+    route:
+    - destination:
+        host: vendor-service
+        port:
+          number: 80
+    timeout: 30s
+    retries:
+      attempts: 3
+      perTryTimeout: 10s
+  - match:
+    - uri:
+        prefix: /api/catalog
+    - uri:
+        prefix: /api/products
+    - uri:
+        prefix: /api/categories
+    - uri:
+        prefix: /api/search
+    route:
+    - destination:
+        host: catalog-service
+        port:
+          number: 80
+    timeout: 30s
+    retries:
+      attempts: 3
+      perTryTimeout: 10s
+  - match:
+    - uri:
+        prefix: /api/orders
+    route:
+    - destination:
+        host: order-service
+        port:
+          number: 80
+    timeout: 30s
+    retries:
+      attempts: 3
+      perTryTimeout: 10s
+---
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: bookmarket-authz
+  namespace: bookmarket
+spec:
+  rules:
+  - from:
+    - source:
+        principals: ["cluster.local/ns/istio-system/sa/istio-ingressgateway-service-account"]
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/health", "/ready", "/metrics"]
+---
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  name: bookmarket-destination-rules
+  namespace: bookmarket
+spec:
+  host: "*.bookmarket.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_CONN
+    connectionPool:
+      tcp:
+        maxConnections: 100
+      http:
+        http1MaxPendingRequests: 50
+        maxRequestsPerConnection: 10
+    circuitBreaker:
+      consecutiveErrors: 3
+      interval: 30s
+      baseEjectionTime: 30s

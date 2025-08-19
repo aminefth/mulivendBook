@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: bookmarket
+  labels:
+    name: bookmarket
+    istio-injection: enabled

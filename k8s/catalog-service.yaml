@@ -1,0 +1,81 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: catalog-service
+  namespace: bookmarket
+  labels:
+    app: catalog-service
+    version: v1
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: catalog-service
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: catalog-service
+        version: v1
+    spec:
+      containers:
+      - name: catalog-service
+        image: bookmarket/catalog-service:latest
+        ports:
+        - containerPort: 3003
+        env:
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: database-secret
+              key: url
+        - name: REDIS_URL
+          value: "redis://redis-service:6379"
+        - name: ELASTICSEARCH_URL
+          value: "http://elasticsearch-service:9200"
+        - name: JWT_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: jwt-secret
+              key: secret
+        - name: PORT
+          value: "3003"
+        - name: AWS_REGION
+          value: "us-east-1"
+        - name: AWS_BUCKET
+          value: "bookmarket-catalog"
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "200m"
+          limits:
+            memory: "1Gi"
+            cpu: "1000m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 3003
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 3003
+          initialDelaySeconds: 5
+          periodSeconds: 5
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: catalog-service
+  namespace: bookmarket
+  labels:
+    app: catalog-service
+spec:
+  selector:
+    app: catalog-service
+  ports:
+  - port: 80
+    targetPort: 3003
+    protocol: TCP
+  type: ClusterIP
