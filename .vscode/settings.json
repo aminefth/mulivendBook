@@ -82,8 +82,8 @@
   // Editor Configuration
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "source.organizeImports": true
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
   },
   "editor.rulers": [80, 100, 120],
   "editor.wordWrap": "bounded",
@@ -110,7 +110,7 @@
     "editor.defaultFormatter": "golang.go",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true
+      "source.organizeImports": "explicit"
     },
     "editor.tabSize": 4,
     "editor.insertSpaces": false

@@ -1,0 +1,131 @@
+{
+  "nav": {
+    "home": "Home",
+    "books": "Books",
+    "categories": "Categories",
+    "vendors": "Bookstores",
+    "cart": "Cart",
+    "account": "Account",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "search": "Search"
+  },
+  "home": {
+    "hero": {
+      "title": "Discover the World of Books in Morocco",
+      "subtitle": "The largest collection of Arabic, French and English books from Morocco's finest bookstores",
+      "cta": "Browse Books",
+      "search_placeholder": "Search for books, authors, or topics..."
+    },
+    "featured": {
+      "title": "Featured Books",
+      "subtitle": "Discover the latest releases and bestsellers"
+    },
+    "categories": {
+      "title": "Browse by Category",
+      "islamic_studies": "Islamic Studies",
+      "arabic_literature": "Arabic Literature",
+      "french_literature": "French Literature",
+      "moroccan_culture": "Moroccan Culture",
+      "academic": "Academic Textbooks",
+      "business": "Business & Economics",
+      "technology": "Science & Technology",
+      "children": "Children's Books"
+    },
+    "vendors": {
+      "title": "Partner Bookstores",
+      "subtitle": "Shop from Morocco's best bookstores"
+    }
+  },
+  "product": {
+    "price": "Price",
+    "author": "Author",
+    "publisher": "Publisher",
+    "pages": "Pages",
+    "language": "Language",
+    "isbn": "ISBN",
+    "stock": "In Stock",
+    "out_of_stock": "Out of Stock",
+    "add_to_cart": "Add to Cart",
+    "buy_now": "Buy Now",
+    "description": "Description",
+    "reviews": "Reviews",
+    "related": "Related Books"
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty",
+    "continue_shopping": "Continue Shopping",
+    "item": "item",
+    "items": "items",
+    "quantity": "Quantity",
+    "total": "Total",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "tax": "Tax",
+    "checkout": "Checkout",
+    "remove": "Remove",
+    "update": "Update"
+  },
+  "auth": {
+    "login": {
+      "title": "Login",
+      "email": "Email",
+      "password": "Password",
+      "remember": "Remember me",
+      "forgot_password": "Forgot password?",
+      "submit": "Login",
+      "no_account": "Don't have an account?",
+      "create_account": "Create account"
+    },
+    "register": {
+      "title": "Create Account",
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "email": "Email",
+      "password": "Password",
+      "confirm_password": "Confirm Password",
+      "phone": "Phone",
+      "agree_terms": "I agree to the terms and conditions",
+      "submit": "Create Account",
+      "have_account": "Already have an account?",
+      "login_here": "Login here"
+    }
+  },
+  "checkout": {
+    "title": "Checkout",
+    "shipping_address": "Shipping Address",
+    "billing_address": "Billing Address",
+    "payment_method": "Payment Method",
+    "order_summary": "Order Summary",
+    "place_order": "Place Order",
+    "credit_card": "Credit Card",
+    "bank_transfer": "Bank Transfer",
+    "cash_on_delivery": "Cash on Delivery"
+  },
+  "account": {
+    "dashboard": "Dashboard",
+    "orders": "My Orders",
+    "profile": "Profile",
+    "addresses": "Addresses",
+    "wishlist": "Wishlist",
+    "settings": "Settings"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "view": "View",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "confirm": "Confirm",
+    "currency": "MAD"
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "books": "الكتب",
+    "categories": "التصنيفات",
+    "vendors": "المكتبات",
+    "cart": "السلة",
+    "account": "الحساب",
+    "login": "تسجيل الدخول",
+    "register": "إنشاء حساب",
+    "logout": "تسجيل الخروج",
+    "search": "البحث"
+  },
+  "home": {
+    "hero": {
+      "title": "اكتشف عالم الكتب في المغرب",
+      "subtitle": "أكبر مجموعة من الكتب العربية والفرنسية والإنجليزية من أفضل المكتبات المغربية",
+      "cta": "تصفح الكتب",
+      "search_placeholder": "ابحث عن كتاب، مؤلف، أو موضوع..."
+    },
+    "featured": {
+      "title": "الكتب المميزة",
+      "subtitle": "اكتشف أحدث الإصدارات والكتب الأكثر مبيعاً"
+    },
+    "categories": {
+      "title": "تصفح حسب التصنيف",
+      "islamic_studies": "الدراسات الإسلامية",
+      "arabic_literature": "الأدب العربي",
+      "french_literature": "الأدب الفرنسي",
+      "moroccan_culture": "الثقافة المغربية",
+      "academic": "الكتب الأكاديمية",
+      "business": "الأعمال والاقتصاد",
+      "technology": "العلوم والتكنولوجيا",
+      "children": "كتب الأطفال"
+    },
+    "vendors": {
+      "title": "المكتبات الشريكة",
+      "subtitle": "تسوق من أفضل المكتبات في المغرب"
+    }
+  },
+  "product": {
+    "price": "السعر",
+    "author": "المؤلف",
+    "publisher": "الناشر",
+    "pages": "عدد الصفحات",
+    "language": "اللغة",
+    "isbn": "الرقم المعياري",
+    "stock": "متوفر",
+    "out_of_stock": "غير متوفر",
+    "add_to_cart": "أضف إلى السلة",
+    "buy_now": "اشتر الآن",
+    "description": "الوصف",
+    "reviews": "التقييمات",
+    "related": "كتب ذات صلة"
+  },
+  "cart": {
+    "title": "سلة التسوق",
+    "empty": "سلة التسوق فارغة",
+    "continue_shopping": "متابعة التسوق",
+    "item": "عنصر",
+    "items": "عناصر",
+    "quantity": "الكمية",
+    "total": "المجموع",
+    "subtotal": "المجموع الفرعي",
+    "shipping": "الشحن",
+    "tax": "الضريبة",
+    "checkout": "إتمام الشراء",
+    "remove": "إزالة",
+    "update": "تحديث"
+  },
+  "auth": {
+    "login": {
+      "title": "تسجيل الدخول",
+      "email": "البريد الإلكتروني",
+      "password": "كلمة المرور",
+      "remember": "تذكرني",
+      "forgot_password": "نسيت كلمة المرور؟",
+      "submit": "دخول",
+      "no_account": "ليس لديك حساب؟",
+      "create_account": "إنشاء حساب جديد"
+    },
+    "register": {
+      "title": "إنشاء حساب جديد",
+      "first_name": "الاسم الأول",
+      "last_name": "الاسم الأخير",
+      "email": "البريد الإلكتروني",
+      "password": "كلمة المرور",
+      "confirm_password": "تأكيد كلمة المرور",
+      "phone": "رقم الهاتف",
+      "agree_terms": "أوافق على الشروط والأحكام",
+      "submit": "إنشاء حساب",
+      "have_account": "لديك حساب بالفعل؟",
+      "login_here": "سجل دخولك هنا"
+    }
+  },
+  "checkout": {
+    "title": "إتمام الشراء",
+    "shipping_address": "عنوان الشحن",
+    "billing_address": "عنوان الفوترة",
+    "payment_method": "طريقة الدفع",
+    "order_summary": "ملخص الطلب",
+    "place_order": "تأكيد الطلب",
+    "credit_card": "بطاقة ائتمانية",
+    "bank_transfer": "تحويل بنكي",
+    "cash_on_delivery": "الدفع عند الاستلام"
+  },
+  "account": {
+    "dashboard": "لوحة التحكم",
+    "orders": "طلباتي",
+    "profile": "الملف الشخصي",
+    "addresses": "العناوين",
+    "wishlist": "قائمة الأمنيات",
+    "settings": "الإعدادات"
+  },
+  "common": {
+    "loading": "جاري التحميل...",
+    "error": "حدث خطأ",
+    "success": "تم بنجاح",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "view": "عرض",
+    "back": "رجوع",
+    "next": "التالي",
+    "previous": "السابق",
+    "close": "إغلاق",
+    "confirm": "تأكيد",
+    "currency": "درهم"
+  }
+}
